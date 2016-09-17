@@ -1,0 +1,12 @@
+#!/bin/bash
+gnuplot -persist<<FIN
+#set term postscript eps
+#set output "output.eps"
+set title "Hydrogen Molecule in Hartree-Fock treatment"
+set ylabel " E [eV]"
+set xlabel " R [A]"
+set format x "%g";
+plot [0.4:6] "h2.out" using 1:5 with lines
+
+FIN
+
